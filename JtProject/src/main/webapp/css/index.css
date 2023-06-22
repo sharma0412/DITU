@@ -1,0 +1,44 @@
+.userlogin-main{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.userlogin-inner {
+    width: 50%;
+    margin: auto;
+    box-shadow: 0px 1px 13px #9b9b9b;
+    border-radius: 7px;
+    padding: 35px 46px 50px;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.userlogin-inner  input,.userlogin-inner  textarea {
+    font-size: 15px !important;
+    border-color: #ced4da !important;
+}
+.common-btn {
+    background: #0c0c44;
+    color: #fff !important;
+    height: 46px;
+    text-align: center;
+}
+.linkControl {
+    color: #0e0eb7;
+}
+.userlogin-inner h2{
+    font-weight: 600;
+}
+@media(max-width:991px){
+    .userlogin-inner {
+        width: 100%;
+    }
+
+}
+@media(max-width:420px){
+    .userlogin-inner {
+        padding: 35px 20px;
+    }
+}
