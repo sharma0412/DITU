@@ -31,6 +31,27 @@
 .userlogin-inner h2{
     font-weight: 600;
 }
+/*admin*/
+.adminlogin-main {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.bg-dark {
+    background-color: #dad7d7 !important;
+}
+.admin-common-btn {
+    background: darkred;
+    color: #fff !important;
+    height: 46px;
+    text-align: center;
+    border-radius: 7px;
+}
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
 @media(max-width:991px){
     .userlogin-inner {
         width: 100%;

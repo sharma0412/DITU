@@ -44,8 +44,11 @@
                             <label for="Address">Address</label>
                             <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address"></textarea>
                         </div>
-                        <span style="margin-top: 10px">Already have an account <a class="linkControl" href="/">Login here</a></span> <br><br>
-                        <input type="submit" value="Register" class="btn common-btn btn-block">
+                        <span style="margin-top: 10px">Already have an account <a class="linkControl" href="/">Login here</a></span>
+                        <div class="mt-3">
+                            <button type="submit"  class="btn common-btn btn-block">Register</button>
+                        </div>
+
                     </form>
                 </div>
             </div>
