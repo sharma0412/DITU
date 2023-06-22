@@ -1,10 +1,6 @@
 # E-commerce-project-springBoot
 This a web application Java Based  Beginner level project To developing the e-commerce website to Buy/sell the Food Item. We use the Spring Boot to build the back-end part
 
-## Old Version
-- https://github.com/jaygajera17/E-commerce-project-springBoot/tree/main
-- issue: everytime connection open close for access database 
-
 ## New Upgrade ( what's new)
 - Hibernate configuration added( database and tables automatically create when run the project)
 - Service classes provide reusable services throughout project
