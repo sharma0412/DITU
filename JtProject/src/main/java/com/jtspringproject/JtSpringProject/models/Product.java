@@ -16,8 +16,12 @@ public class Product {
 	@Column(name = "product_id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	
+
+
+
+
 	private String name;
+
 	
 	private String image;
 	
@@ -101,6 +105,7 @@ public class Product {
 	@ManyToOne
     @JoinColumn(name = "customer_id")
     private User customer;
+
 	
 	
 }
