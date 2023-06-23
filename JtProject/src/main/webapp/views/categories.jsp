@@ -74,10 +74,11 @@
 							<input type="text" name="categoryname" class="form-control"
 								id="name" required="required" placeholder="Category name">
 						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary"
+						<div class="modal-footer border-0">
+							<button type="button" class="btn btn-secondary close-btn m-0 mr-2"
 								data-dismiss="modal">Close</button>
-							<input type="submit" value="Save Changes" class="btn common-btn">
+							<button type="submit" class="btn common-btn ">Save Changes</button>
+
 						</div>
 					</form>
 				</div>
