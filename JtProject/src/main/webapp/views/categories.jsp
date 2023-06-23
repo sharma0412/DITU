@@ -78,7 +78,6 @@
 							<button type="button" class="btn btn-secondary close-btn m-0 mr-2"
 								data-dismiss="modal">Close</button>
 							<button type="submit" class="btn common-btn ">Save Changes</button>
-
 						</div>
 					</form>
 				</div>
