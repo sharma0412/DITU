@@ -16,6 +16,7 @@
 	href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
 	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
 	crossorigin="anonymous">
+	<link href="../css/index.css" rel="stylesheet" type="text/css">
 <title>Document</title>
 </head>
 <body class="bg-light">
@@ -46,11 +47,11 @@
 		</div>
 	</nav><br>
 	<div class="container">
-
+<div class="table-category">
 
 
 		<!-- Button trigger modal -->
-		<button type="button" style="margin: 20px 0" class="btn btn-primary"
+		<button type="button" style="margin: 20px 0" class="btn common-btn"
 			data-toggle="modal" data-target="#exampleModalCenter">Add
 			Category</button>
 
@@ -76,18 +77,14 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary"
 								data-dismiss="modal">Close</button>
-							<input type="submit" value="Save Changes" class="btn btn-primary">
+							<input type="submit" value="Save Changes" class="btn common-btn">
 						</div>
 					</form>
 				</div>
 			</div>
 		</div><br>
-
-
-
-
-		<table class="table">
-			<thead class="thead-light">
+		<table class="table  table-striped">
+			<thead class="thread-table">
 				<tr>
 					<th scope="col">SN</th>
 					<th scope="col">Category Name</th>
@@ -96,7 +93,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				
+
 				<c:forEach var="category" items="${categories }">
 				<tr>
 					<td>${category.id }</td>
@@ -167,7 +164,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		
+</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
