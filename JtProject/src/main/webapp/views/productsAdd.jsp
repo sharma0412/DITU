@@ -79,7 +79,7 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="price">Price</label> 
+						<label for="price">Price</label>
 						<input type="number" class="form-control border border-warning" required name="price" min="1" placeholder="Price">
 					</div>
 					<div class="form-group">
