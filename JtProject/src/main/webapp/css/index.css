@@ -52,6 +52,13 @@
 .btn.focus, .btn:focus {
     box-shadow: none;
 }
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgb(0 0 0 / 3%);
+}
+/*category*/
+.thread-table {
+    background: #0c0c443b;
+}
 @media(max-width:991px){
     .userlogin-inner {
         width: 100%;
@@ -63,3 +70,4 @@
         padding: 35px 20px;
     }
 }
+
