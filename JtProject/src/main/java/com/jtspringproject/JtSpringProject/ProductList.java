@@ -14,20 +14,18 @@ public class ProductList {
                 for (int i = 0; i < age.length; i++) {
                     System.out.println(age[i]);
                 }
-
                 age = new int[5];
                 age[0] = 12;
                 age[1] = 4;
                 age[2] = 5;
                 System.out.println("numberString");
             }catch (ArrayIndexOutOfBoundsException e) {
-
                 System.out.println(e);
             }
-
         }
 
     }
+
 
 
 
