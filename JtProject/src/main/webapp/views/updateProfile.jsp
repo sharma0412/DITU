@@ -33,11 +33,11 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control form-control-lg" required placeholder="Password*" value="${password }" required name="password"
+                <input type="password" class="form-control form-control-lg" required placeholder="Password" value="${password }" required name="password"
                        id="password">
             </div>
             <div class="form-group">
-                <label for="Address">Address</label>
+                <label for="Address">Address (Max 40 characters)</label>
                 <textarea class="form-control form-control-lg" rows="3" placeholder="Enter Your Address" name="address">${address }</textarea>
             </div>
 

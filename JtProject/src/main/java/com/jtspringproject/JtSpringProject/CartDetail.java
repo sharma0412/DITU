@@ -13,11 +13,12 @@ public class CartDetail {
             System.out.println(e);
         }
         finally{
-            System.out.println("finally block is always exwcuted");
+            System.out.println("finally block is always executed");
         }
         System.out.println("rest of the code...");
     }
     public static void validate(int age) {
+
 
         if(age<18) {
             //throw Arithmetic exception if not eligible to vote
