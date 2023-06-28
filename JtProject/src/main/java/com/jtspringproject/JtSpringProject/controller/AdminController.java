@@ -80,18 +80,18 @@ public class AdminController {
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
 		
 		User user=this.userService.checkLogin(username, pass);
-		
+
+		ModelAndView mv;
 		if(user.getRole().equals("ROLE_ADMIN")) {
-			ModelAndView mv = new ModelAndView("adminHome");
+			mv = new ModelAndView("adminHome");
 			adminlogcheck=1;
 			mv.addObject("admin", user);
-			return mv;
 		}
 		else {
-			ModelAndView mv = new ModelAndView("adminlogin");
+			mv = new ModelAndView("adminlogin");
 			mv.addObject("msg", "Please enter correct username and password");
-			return mv;
 		}
+		return mv;
 	}
 	@GetMapping("categories")
 	public ModelAndView getcategory() {
@@ -231,23 +231,21 @@ public class AdminController {
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","");
-			String stmtQueryStr = "select * from users where username = ?;";
-			PreparedStatement stmt = con.prepareStatement(stmtQueryStr);
-			stmt.setString(1, usernameforclass);
-			ResultSet rst = stmt.executeQuery();
-			
+			Statement stmt = con.createStatement();
+			ResultSet rst = stmt.executeQuery("select * from users where username = '"+usernameforclass+"';");
+
 			if(rst.next())
 			{
-			int userid = rst.getInt(1);
-			displayusername = rst.getString(2);
-			displayemail = rst.getString(3);
-			displaypassword = rst.getString(4);
-			displayaddress = rst.getString(5);
-			model.addAttribute("userid",userid);
-			model.addAttribute("username",displayusername);
-			model.addAttribute("email",displayemail);
-			model.addAttribute("password",displaypassword);
-			model.addAttribute("address",displayaddress);
+				int userid = rst.getInt(1);
+				displayusername = rst.getString(2);
+				displayemail = rst.getString(3);
+				displaypassword = rst.getString(4);
+				displayaddress = rst.getString(5);
+				model.addAttribute("userid",userid);
+				model.addAttribute("username",displayusername);
+				model.addAttribute("email",displayemail);
+				model.addAttribute("password",displaypassword);
+				model.addAttribute("address",displayaddress);
 			}
 		}
 		catch(Exception e)
