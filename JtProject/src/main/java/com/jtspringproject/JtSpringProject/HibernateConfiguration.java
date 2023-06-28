@@ -42,7 +42,7 @@ public class HibernateConfiguration {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(DRIVER);
+//        dataSource.setDriverClassName(DRIVER);
         dataSource.setUrl(URL);
         dataSource.setUsername(USERNAME);
         dataSource.setPassword(PASSWORD);

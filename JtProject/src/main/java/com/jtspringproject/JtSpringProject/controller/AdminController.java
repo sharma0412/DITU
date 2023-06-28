@@ -112,11 +112,7 @@ public class AdminController {
 		System.out.println(category_name);
 		
 		Category category =  this.categoryService.addCategory(category_name);
-		if(category.getName().equals(category_name)) {
-			return "redirect:categories";
-		}else {
-			return "redirect:categories";
-		}
+		return "redirect:categories";
 	}
 	
 	@GetMapping("categories/delete")
