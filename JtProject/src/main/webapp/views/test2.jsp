@@ -16,9 +16,7 @@
     Name: ${name}, id= ${id}
    </h1>
    <hr>
-   
-  
-      <c:forEach var="item" items="${marks }">
+   <c:forEach var="item" items="${marks }">
       <h1>${item }</h1>
       </c:forEach>
    

@@ -18,9 +18,9 @@ public class AddToCart {
             age[1] = 4;
             age[2] = 5;
             System.out.println("numberString");
-        }catch (ArrayIndexOutOfBoundsException e) {
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(e);
-
         }
     }
 }

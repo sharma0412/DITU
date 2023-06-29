@@ -33,6 +33,30 @@ public List<Cart> getCarts(){
         cartDao.deleteCart(cart);
     }
 
+    public void setCartDao(Cart cart){cartDao.notify();}
+
+    public void setCartDao(com.jtspringproject.JtSpringProject.dao.cartDao cartDao) {
+        this.cartDao = cartDao;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    public com.jtspringproject.JtSpringProject.dao.cartDao getCartDao() {
+        return cartDao;
+    }
 
 
 }

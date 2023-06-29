@@ -19,6 +19,7 @@
 <body class="bg-dark">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
+
 			<a class="navbar-brand" href="#"> <img
 				src="../static/images/logo.png" width="auto" height="40"
 				class="d-inline-block align-top" alt="" />
@@ -43,9 +44,13 @@
 		</div>
 	</nav>
 	<div class="jumbotron text-center">
+
 		<h1 class="display-4">Welcome Back, Admin</h1><hr>
+
 		<p>Manage your data from this Admin Panel</p>
+
 	</div><br>
+
 	<div class="container-fluid" >
 		<div class="row justify-content-center">
 			<div class="col-sm-3 pt-4">
@@ -55,12 +60,11 @@
 						<p>---------------------------------------------</p>
 						<p class="card-text">Manage the categories section here.</p>
 						<a href="/admin/categories" class="card-link btn btn-primary">Manage</a>
-
-					</div>
+							</div>
 				</div>
 			</div>
 			<div class="col-sm-3 pt-4">
-				<div class="card" style="background-color: white;">
+		<div class="card" style="background-color: white;">
 					<div class="card-body text-center">
 						<h4 class="card-title">Products</h4>
 						<p>---------------------------------------------</p>
@@ -81,15 +85,10 @@
 					</div>
 				</div>
 			</div>
-			
-			
-			
+
 		</div>
 	</div>
-
-
-
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
 	<script

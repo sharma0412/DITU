@@ -18,11 +18,11 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 
-	private String username;akshma
+	private String username;//akshma
 	
-	private String email;akshmapundir21@gmail.com
+	private String email;//akshmapundir21@gmail.com
 	
-	private String password;1234
+	private String password;//1234
 	
 	private String role;
 	
@@ -76,6 +76,7 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 	
 	 
 

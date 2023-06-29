@@ -15,19 +15,13 @@
   %>
   <h1> author name is <%=s %> </h1>
   <h1> Id is <%=id %> </h1>
-   
-   <% 
+   <%
    for(String st:friends)
    {
     %>
     <h1> <%=st %></h1>
-    <%
+      <%
     } 
     %>
-    
-    
-  
- 
- 
- </body>
+     </body>
 </html>
