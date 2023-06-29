@@ -79,31 +79,31 @@ public class AdminController {
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
 		
 		User user=this.userService.checkLogin(username, pass);
-		
+
+		ModelAndView mv;
 		if(user.getRole().equals("ROLE_ADMIN")) {
-			ModelAndView mv = new ModelAndView("adminHome");
+			mv = new ModelAndView("adminHome");
 			adminlogcheck=1;
 			mv.addObject("admin", user);
-			return mv;
 		}
 		else {
-			ModelAndView mv = new ModelAndView("adminlogin");
+			mv = new ModelAndView("adminlogin");
 			mv.addObject("msg", "Please enter correct username and password");
-			return mv;
 		}
+		return mv;
 	}
 	@GetMapping("categories")
 	public ModelAndView getcategory() {
+		ModelAndView mView;
 		if(adminlogcheck==0){
-			ModelAndView mView = new ModelAndView("adminlogin");
-			return mView;
+			mView = new ModelAndView("adminlogin");
 		}
 		else {
-			ModelAndView mView = new ModelAndView("categories");
+			mView = new ModelAndView("categories");
 			List<Category> categories = this.categoryService.getCategories();
 			mView.addObject("categories", categories);
-			return mView;
 		}
+		return mView;
 	}
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
 	public String addCategory(@RequestParam("categoryname") String category_name)
@@ -137,12 +137,12 @@ public class AdminController {
 //	 --------------------------Remaining --------------------
 	@GetMapping("products")
 	public ModelAndView getproduct() {
+		ModelAndView mView;
 		if(adminlogcheck==0){
-			ModelAndView mView = new ModelAndView("adminlogin");
-			return mView;
+			mView = new ModelAndView("adminlogin");
 		}
 		else {
-			ModelAndView mView = new ModelAndView("products");
+			mView = new ModelAndView("products");
 
 			List<Product> products = this.productService.getProducts();
 
@@ -151,8 +151,8 @@ public class AdminController {
 			} else {
 				mView.addObject("products", products);
 			}
-			return mView;
 		}
+		return mView;
 
 	}
 	@GetMapping("products/add")
@@ -214,16 +214,16 @@ public class AdminController {
 	
 	@GetMapping("customers")
 	public ModelAndView getCustomerDetail() {
+		ModelAndView mView;
 		if(adminlogcheck==0){
-			ModelAndView mView = new ModelAndView("adminlogin");
-			return mView;
+			mView = new ModelAndView("adminlogin");
 		}
 		else {
-			ModelAndView mView = new ModelAndView("displayCustomers");
+			mView = new ModelAndView("displayCustomers");
 			List<User> users = this.userService.getUsers();
 			mView.addObject("customers", users);
-			return mView;
 		}
+		return mView;
 	}
 	
 	
