@@ -44,9 +44,7 @@ public class AdminController {
 		usernameforclass = "";
 		return "userLogin";
 	}
-	
-	
-	
+
 	@GetMapping("/index")
 	public String index(Model model) {
 		if(usernameforclass.equalsIgnoreCase(""))
@@ -130,8 +128,6 @@ public class AdminController {
 		return "redirect:/admin/categories";
 	}
 
-	
-//	 --------------------------Remaining --------------------
 	@GetMapping("products")
 	public ModelAndView getproduct() {
 		if(adminlogcheck==0){
@@ -193,7 +189,6 @@ public class AdminController {
 	public String updateProduct(@PathVariable("id") int id ,@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage)
 	{
 
-//		this.productService.updateProduct();
 		return "redirect:/admin/products";
 	}
 	
