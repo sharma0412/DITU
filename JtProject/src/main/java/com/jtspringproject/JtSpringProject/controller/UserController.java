@@ -107,13 +107,9 @@ public class UserController{
 		System.out.println(user.getEmail());
 		user.setRole("ROLE_NORMAL");
 		this.userService.addUser(user);
-		
+
 		return "redirect:/";
 	}
-	
-	
-	
-	   //for Learning purpose of model
 		@GetMapping("/test")
 		public String Test(Model model)
 		{
@@ -128,9 +124,6 @@ public class UserController{
 			
 			return "test";
 		}
-		
-		// for learning purpose of model and view ( how data is pass to view)
-		
 		@GetMapping("/test2")
 		public ModelAndView Test2()
 		{
@@ -146,16 +139,5 @@ public class UserController{
 			list.add(25);
 			mv.addObject("marks",list);
 			return mv;
-			
-			
 		}
-
-
-//	@GetMapping("carts")
-//	public ModelAndView  getCartDetail()
-//	{
-//		ModelAndView mv= new ModelAndView();
-//		List<Cart>carts = cartService.getCarts();
-//	}
-	  
 }

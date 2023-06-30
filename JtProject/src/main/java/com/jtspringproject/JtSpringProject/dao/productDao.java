@@ -8,17 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jtspringproject.JtSpringProject.models.Category;
 import com.jtspringproject.JtSpringProject.models.Product;
 
 @Repository
 public class productDao {
 	@Autowired
     private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf) {
-        this.sessionFactory = sf;
-    }
 	
 	@Transactional
 	public List<Product> getProducts(){
@@ -41,16 +36,15 @@ public class productDao {
 		return product;
 	}
 	@Transactional
-	public Boolean deletProduct(int id) {
+	public Boolean deleteProduct(int id) {
 
 		Session session = this.sessionFactory.getCurrentSession();
-		Object persistanceInstance = session.load(Product.class, id);
+		Object persistenceInstance = session.load(Product.class, id);
 
-		if (persistanceInstance != null) {
-			session.delete(persistanceInstance);
+		if (persistenceInstance != null) {
+			session.delete(persistenceInstance);
 			return true;
 		}
 		return false;
 	}
-
 }
