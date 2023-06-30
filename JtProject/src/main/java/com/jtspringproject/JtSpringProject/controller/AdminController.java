@@ -95,16 +95,16 @@ public class AdminController {
 	}
 	@GetMapping("categories")
 	public ModelAndView getcategory() {
+		ModelAndView mView;
 		if(adminlogcheck==0){
-			ModelAndView mView = new ModelAndView("adminlogin");
-			return mView;
+			mView = new ModelAndView("adminlogin");
 		}
 		else {
-			ModelAndView mView = new ModelAndView("categories");
+			mView = new ModelAndView("categories");
 			List<Category> categories = this.categoryService.getCategories();
 			mView.addObject("categories", categories);
-			return mView;
 		}
+		return mView;
 	}
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
 	public String addCategory(@RequestParam("categoryname") String category_name)
@@ -117,7 +117,7 @@ public class AdminController {
 	
 	@GetMapping("categories/delete")
 	public ModelAndView removeCategoryDb(@RequestParam("id") int id)
-	{	
+	{
 			this.categoryService.deleteCategory(id);
 			ModelAndView mView = new ModelAndView("forward:/categories");
 			return mView;
@@ -211,16 +211,16 @@ public class AdminController {
 	
 	@GetMapping("customers")
 	public ModelAndView getCustomerDetail() {
+		ModelAndView mView;
 		if(adminlogcheck==0){
-			ModelAndView mView = new ModelAndView("adminlogin");
-			return mView;
+			mView = new ModelAndView("adminlogin");
 		}
 		else {
-			ModelAndView mView = new ModelAndView("displayCustomers");
+			mView = new ModelAndView("displayCustomers");
 			List<User> users = this.userService.getUsers();
 			mView.addObject("customers", users);
-			return mView;
 		}
+		return mView;
 	}
 	
 	
