@@ -100,16 +100,16 @@ public class UserController{
 
 		return mView;
 	}
-	@RequestMapping(value = "newuserregister", method = RequestMethod.POST)
-	public String newUseRegister(@ModelAttribute User user)
-	{
-		
-		System.out.println(user.getEmail());
-		user.setRole("ROLE_NORMAL");
-		this.userService.addUser(user);
-
-		return "redirect:/";
-	}
+//	@RequestMapping(value = "newuserregister", method = RequestMethod.POST)
+//	public String newUseRegister(@ModelAttribute User user)
+//	{
+//
+//		System.out.println(user.getEmail());
+//		user.setRole("ROLE_NORMAL");
+//		this.userService.addUser(user);
+//
+//		return "redirect:/";
+//	}
 		@GetMapping("/test")
 		public String Test(Model model)
 		{
