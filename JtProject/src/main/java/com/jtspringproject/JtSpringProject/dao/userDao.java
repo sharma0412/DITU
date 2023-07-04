@@ -15,8 +15,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jtspringproject.JtSpringProject.models.User;
 
 
-@Repository
-public class userDao {
+@
+public class    userDao {Repository
+
+
 	@Autowired
     private SessionFactory sessionFactory;
 	
