@@ -31,7 +31,6 @@ public class categoryDao {
 	public List<Category> getCategories() {
 		return this.sessionFactory.getCurrentSession().createQuery("from CATEGORY").list();
 	}
-
 	@Transactional
 	public Boolean deletCategory(int id) {
 
