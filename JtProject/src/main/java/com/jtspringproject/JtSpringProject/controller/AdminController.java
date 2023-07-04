@@ -74,6 +74,9 @@ public class AdminController {
 		
 		return "adminlogin";
 	}
+
+
+
 	@RequestMapping(value = "loginvalidate", method = RequestMethod.POST)
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
 		
@@ -91,6 +94,9 @@ public class AdminController {
 		}
 		return mv;
 	}
+
+
+
 	@GetMapping("categories")
 	public ModelAndView getcategory() {
 		ModelAndView mView;
@@ -104,6 +110,9 @@ public class AdminController {
 		}
 		return mView;
 	}
+
+
+
 	@RequestMapping(value = "categories",method = RequestMethod.POST)
 	public String addCategory(@RequestParam("categoryname") String category_name)
 	{
@@ -112,6 +121,8 @@ public class AdminController {
 		Category category =  this.categoryService.addCategory(category_name);
 		return "redirect:categories";
 	}
+
+
 	
 	@GetMapping("categories/delete")
 	public ModelAndView removeCategoryDb(@RequestParam("id") int id)
@@ -120,6 +131,8 @@ public class AdminController {
 			ModelAndView mView = new ModelAndView("forward:/categories");
 			return mView;
 	}
+
+
 	
 	@GetMapping("categories/update")
 	public String updateCategory(@RequestParam("categoryid") int id, @RequestParam("categoryname") String categoryname)
@@ -146,8 +159,9 @@ public class AdminController {
 			}
 			return mView;
 		}
-
 	}
+
+
 	@GetMapping("products/add")
 	public ModelAndView addProduct() {
 		ModelAndView mView = new ModelAndView("productsAdd");
