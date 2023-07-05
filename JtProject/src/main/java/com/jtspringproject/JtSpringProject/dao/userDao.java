@@ -23,8 +23,7 @@ public class    userDao {Repository
     private SessionFactory sessionFactory;
 	
 	public void setSessionFactory(SessionFactory sf) {
-        this.sessionFactory = sf;
-    }
+        this.sessionFactory = sf;}
    @Transactional
     public List<User> getAllUser() {
         Session session = this.sessionFactory.getCurrentSession();
@@ -60,6 +59,5 @@ public class    userDao {Repository
 			User user = new User();
 			return user;
 		}
-    	
-    }
+	}
 }

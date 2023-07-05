@@ -21,10 +21,11 @@ public class productDao {
     }
 	
 	@Transactional
-	public List<Product> getProducts(){
+	public List<Product> getProducts() {
 		return this.sessionFactory.getCurrentSession().createQuery("from PRODUCT").list();
 	}
-	
+
+
 	@Transactional
 	public Product addProduct(Product product) {
 		this.sessionFactory.getCurrentSession().save(product);
