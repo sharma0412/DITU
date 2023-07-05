@@ -269,7 +269,7 @@ public class AdminController {
 	
 	@RequestMapping(value = "updateuser",method=RequestMethod.POST)
 	public String updateUserProfile(@RequestParam("userid") int userid,@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("address") String address) 
-	
+
 	{
 		try
 		{

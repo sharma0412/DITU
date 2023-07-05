@@ -43,6 +43,7 @@ public class categoryDao {
 		}
 		return false;
 	}
+	
 
 	@Transactional
 	public Category updateCategory(int id, String name) {
@@ -52,6 +53,7 @@ public class categoryDao {
 		this.sessionFactory.getCurrentSession().update(category);
 		return category;
 	}
+
 
 	@Transactional
 	public Category getCategory(int id) {
