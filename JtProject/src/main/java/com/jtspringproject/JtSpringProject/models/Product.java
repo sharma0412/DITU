@@ -101,7 +101,31 @@ public class Product {
 	@ManyToOne
     @JoinColumn(name = "customer_id")
     private User customer;
-	
-	
 }
+	List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+for (String name : names) {
+		System.out.println(name);
+		}
+
+		int[] numbers = {1, 2, 3, 4, 5};
+		for (int num : numbers) {
+		System.out.println(num);
+		}
+
+		// Declaring an array
+		int[] numbers;
+
+// Initializing an array with values
+		numbers = new int[]{1, 2, 3, 4, 5};
+
+// Accessing elements in the array
+		int firstNumber = numbers[0]; // Accessing the first element (1)
+		int secondNumber = numbers[1]; // Accessing the second element (2)
+		int thirdNumber = numbers[2]; // Accessing the third element
+
+
+
+
+
+
 
