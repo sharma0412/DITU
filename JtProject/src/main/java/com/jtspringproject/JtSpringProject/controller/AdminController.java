@@ -276,7 +276,8 @@ public class AdminController {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommjava","root","");
 			
-			PreparedStatement pst = con.prepareStatement("update users set username= ?,email = ?,password= ?, address= ? where uid = ?;");
+			PreparedStatement pst = con.prepareStatement("update users set username= ?,email = ?,pa= ?;");
+
 			pst.setString(1, username);
 			pst.setString(2, email);
 			pst.setString(3, password);

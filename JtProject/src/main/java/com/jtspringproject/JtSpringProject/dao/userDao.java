@@ -15,23 +15,30 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jtspringproject.JtSpringProject.models.User;
 
 
-@
+
 public class    userDao {Repository
 
 
 	@Autowired
+
     private SessionFactory sessionFactory;
 	
 	public void setSessionFactory(SessionFactory sf) {
         this.sessionFactory = sf;}
+
    @Transactional
     public List<User> getAllUser() {
         Session session = this.sessionFactory.getCurrentSession();
 		List<User>  userList = session.createQuery("from CUSTOMER").list();
         return userList;
     }
-    
-    @Transactional
+	int[] numbers = {1, 2, 3, 4, 5};
+for (int num : numbers) {
+		System.out.println(num);
+	}
+
+
+	@Transactional
 	public User saveUser(User user) {
 		this.sessionFactory.getCurrentSession().saveOrUpdate(user);
 		System.out.println("User added" + user.getId());
@@ -54,7 +61,8 @@ public class    userDao {Repository
 			}else {		
 				return new User();
 			}
-		}catch(Exception e){
+		}catch(Exception e)
+		{
 			System.out.println(e.getMessage());
 			User user = new User();
 			return user;

@@ -6,7 +6,7 @@ import java.util.List;
 
 
 @Entity(name="CART")
-public class Cart {
+public class CartNew {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,13 +19,12 @@ public class Cart {
     @ManyToMany
     @JoinTable(
             joinColumns = @JoinColumn(name = "cart_id"),
-
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     private List<Product> products;
 
 
-    public Cart() {
+    public CartNew() {
         products = new ArrayList<>();
     }
 
