@@ -14,23 +14,23 @@ import javax.persistence.OneToOne;
 public class Product {
 	@Id
 	@Column(name = "product_id")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
+
 	private String name;
 
 	private String image;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "category_id",referencedColumnName = "category_id")
+	@JoinColumn(name = "category_id", referencedColumnName = "category_id")
 	private Category category;
-	
+
 	private int quantity;
-	
+
 	private int price;
-	
+
 	private int weight;
-	
+
 	private String description;
 
 	public int getId() {
@@ -97,35 +97,9 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 	@ManyToOne
-    @JoinColumn(name = "customer_id")
-    private User customer;
+	@JoinColumn(name = "customer_id")
+	private User customer;
+
 }
-	List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
-for (String name : names) {
-		System.out.println(name);
-		}
-
-		int[] numbers = {1, 2, 3, 4, 5};
-		for (int num : numbers) {
-		System.out.println(num);
-		}
-
-		// Declaring an array
-		int[] numbers;
-
-// Initializing an array with values
-		numbers = new int[]{1, 2, 3, 4, 5};
-
-// Accessing elements in the array
-		int firstNumber = numbers[0]; // Accessing the first element (1)
-		int secondNumber = numbers[1]; // Accessing the second element (2)
-		int thirdNumber = numbers[2]; // Accessing the third element
-
-
-
-
-
-
-
