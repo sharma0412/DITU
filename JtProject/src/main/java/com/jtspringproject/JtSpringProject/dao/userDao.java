@@ -32,9 +32,6 @@ public class userDao {
         return userList;
     }
 
-
-
-
     @Transactional
     public User saveUser(User user) {
         this.sessionFactory.getCurrentSession().saveOrUpdate(user);

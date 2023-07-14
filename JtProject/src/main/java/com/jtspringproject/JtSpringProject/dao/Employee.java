@@ -11,11 +11,7 @@ package com.jtspringproject.JtSpringProject.dao;
         salary = s;
 
     }
-
-
-
-
-     void display(){
+    void display(){
         System.out.println(id+""+name+""+salary+"");
          {
             Employee e1 = new Employee();

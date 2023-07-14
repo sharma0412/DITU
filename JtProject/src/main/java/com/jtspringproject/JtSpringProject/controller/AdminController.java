@@ -75,8 +75,6 @@ public class AdminController {
 		return "adminlogin";
 	}
 
-
-
 	@RequestMapping(value = "loginvalidate", method = RequestMethod.POST)
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
 		
