@@ -1,7 +1,6 @@
 package com.jtspringproject.JtSpringProject;
 
-public class CheckoutPayment {
-
+public class PaymentMethod {
     String paymentMethod;
 
     String paymentType;
@@ -23,4 +22,5 @@ public class CheckoutPayment {
     public void setPaymentType(String paymentType) {
         this.paymentType = paymentType;
     }
+
 }
