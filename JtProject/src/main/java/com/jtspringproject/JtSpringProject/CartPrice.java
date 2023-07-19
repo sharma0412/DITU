@@ -11,7 +11,6 @@ public class CartPrice {
         this.cartDetail=cartDetail;
     }
 
-
     public String getPrice(){
         return price;
     }

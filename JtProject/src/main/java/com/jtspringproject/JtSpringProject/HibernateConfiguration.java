@@ -20,7 +20,7 @@ public class HibernateConfiguration {
  
     @Value("${db.password}")
     private String PASSWORD;
- 
+
     @Value("${db.url}")
     private String URL;
  

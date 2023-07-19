@@ -29,14 +29,8 @@ public class DeliveryModule {
         for (int i = 0; i < fr.length; i++) {
             if (fr[i] != visited)
                 System.out.println("    " + arr[i] + "    |    " + fr[i]);
-        }
-        System.out.println("----------------------------------------");
-
-
-
-
-
-
+        };
+        System.out.println("---------------------------------------");
 
 
         int temp = 0;
@@ -66,10 +60,10 @@ public class DeliveryModule {
             System.out.print(arr[i] + " ");
         }
 
-        String s="200";
-//Converting String into int using Integer.parseInt()
-        int i=Integer.parseInt(s);
-//Printing value of i
+        String s = "200";
+        //Converting String into int using Integer.parseInt()
+        int i = Integer.parseInt(s);
+        //Printing value of i
         System.out.println(i);
 
 
