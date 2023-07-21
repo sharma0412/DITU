@@ -48,9 +48,7 @@ public class UserAdController {
 
 
     @GetMapping("/")
-
     public String userlogin(Model model) {
-
         return "userLogin";
     }
 
