@@ -32,10 +32,8 @@ public class AdminController {
 	private userService userService;
 	@Autowired
 	private categoryService categoryService;
-	
 	@Autowired
 	private productService productService;
-	
 	int adminlogcheck = 0;
 	String usernameforclass = "";
 	@RequestMapping(value = {"/","/logout"})
