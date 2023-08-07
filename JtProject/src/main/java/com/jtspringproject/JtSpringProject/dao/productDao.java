@@ -1,7 +1,6 @@
 package com.jtspringproject.JtSpringProject.dao;
 
 import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,13 +48,6 @@ public class productDao {
 		}
 		return false;
 	}
-
-
-
-
-
-
-
 }
 
 
