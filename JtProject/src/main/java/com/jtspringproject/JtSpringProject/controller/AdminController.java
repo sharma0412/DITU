@@ -80,17 +80,17 @@ public class AdminController {
 
 		User user=this.userService.checkLogin(username, pass);
 
+		ModelAndView mv;
 		if(user.getRole().equals("ROLE_ADMIN")) {
-			ModelAndView mv = new ModelAndView("adminHome");
+			mv = new ModelAndView("adminHome");
 			adminlogcheck=1;
 			mv.addObject("admin", user);
-			return mv;
 		}
 		else {
-			ModelAndView mv = new ModelAndView("adminlogin");
+			mv = new ModelAndView("adminlogin");
 			mv.addObject("msg", "Please enter correct username and password");
-			return mv;
 		}
+		return mv;
 	}
 	@GetMapping("categories")
 	public ModelAndView getcategory() {
