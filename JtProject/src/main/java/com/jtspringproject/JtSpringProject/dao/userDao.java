@@ -15,57 +15,50 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jtspringproject.JtSpringProject.models.User;
 
 
+public class userDao {
 
-public class    userDao {Repository
 
-
-	@Autowired
 
     private SessionFactory sessionFactory;
-	
-	public void setSessionFactory(SessionFactory sf) {
-        this.sessionFactory = sf;}
 
-   @Transactional
+    public void setSessionFactory(SessionFactory sf) {
+        this.sessionFactory = sf;
+    }
+
+    @Transactional
     public List<User> getAllUser() {
         Session session = this.sessionFactory.getCurrentSession();
-		List<User>  userList = session.createQuery("from CUSTOMER").list();
+        List<User> userList = session.createQuery("from CUSTOMER").list();
         return userList;
     }
-	int[] numbers = {1, 2, 3, 4, 5};
-for (int num : numbers) {
-		System.out.println(num);
-	}
 
-
-	@Transactional
-	public User saveUser(User user) {
-		this.sessionFactory.getCurrentSession().saveOrUpdate(user);
-		System.out.println("User added" + user.getId());
+    @Transactional
+    public User saveUser(User user) {
+        this.sessionFactory.getCurrentSession().saveOrUpdate(user);
+        System.out.println("User added" + user.getId());
         return user;
-	}
-    
-//    public User checkLogin() {
+    }
+
+    //    public User checkLogin() {
 //    	this.sessionFactory.getCurrentSession().
 //    }
     @Transactional
-    public User getUser(String username,String password) {
-    	Query query = sessionFactory.getCurrentSession().createQuery("from CUSTOMER where username = :username");
-    	query.setParameter("username",username);
-    	
-    	try {
-			User user = (User) query.getSingleResult();
-			System.out.println(user.getPassword());
-			if(password.equals(user.getPassword())) {
-				return user;
-			}else {		
-				return new User();
-			}
-		}catch(Exception e)
-		{
-			System.out.println(e.getMessage());
-			User user = new User();
-			return user;
-		}
-	}
+    public User getUser(String username, String password) {
+        Query query = sessionFactory.getCurrentSession().createQuery("from CUSTOMER where username = :username");
+        query.setParameter("username", username);
+
+        try {
+            User user = (User) query.getSingleResult();
+            System.out.println(user.getPassword());
+            if (password.equals(user.getPassword())) {
+                return user;
+            } else {
+                return new User();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            User user = new User();
+            return user;
+        }
+    }
 }

@@ -11,13 +11,7 @@ package com.jtspringproject.JtSpringProject.dao;
         salary = s;
 
     }
-    for (element_type element : array/collection) {
-         // code to be executed
-     }
-
-
-
-     void display(){
+    void display(){
         System.out.println(id+""+name+""+salary+"");
          {
             Employee e1 = new Employee();
@@ -26,12 +20,6 @@ package com.jtspringproject.JtSpringProject.dao;
             e1.insert(101,"Karan",45000);
             e2.insert(103,"Harjeet",45000);
             e3.insert(104,"Sanjeev",45000);
-            e1.display();karan
-
-            e2.display();harjeet
-
-            e3.display();sanjeev
-
 
         }
     }
