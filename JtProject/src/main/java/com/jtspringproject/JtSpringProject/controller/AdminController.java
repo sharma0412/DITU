@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jtspringproject.JtSpringProject.models.Category;
@@ -75,7 +76,7 @@ public class AdminController {
 
 		return "adminlogin";
 	}
-	@RequestMapping(value = "loginvalidate", method = RequestMethod.POST)
+	@PostMapping(value = "loginvalidate")
 	public ModelAndView adminlogin( @RequestParam("username") String username, @RequestParam("password") String pass) {
 
 		User user=this.userService.checkLogin(username, pass);
@@ -105,7 +106,7 @@ public class AdminController {
 			return mView;
 		}
 	}
-	@RequestMapping(value = "categories",method = RequestMethod.POST)
+	@PostMapping(value = "categories")
 	public String addCategory(@RequestParam("categoryname") String category_name)
 	{
 		System.out.println(category_name);
@@ -163,7 +164,7 @@ public class AdminController {
 		return mView;
 	}
 
-	@RequestMapping(value = "products/add",method=RequestMethod.POST)
+	@PostMapping(value = "products/add")
 	public String addProduct(@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage) {
 		System.out.println(categoryId);
 		Category category = this.categoryService.getCategory(categoryId);
@@ -192,7 +193,7 @@ public class AdminController {
 		return mView;
 	}
 
-	@RequestMapping(value = "products/update/{id}",method=RequestMethod.POST)
+	@PostMapping(value = "products/update/{id}")
 	public String updateProduct(@PathVariable("id") int id ,@RequestParam("name") String name,@RequestParam("categoryid") int categoryId ,@RequestParam("price") int price,@RequestParam("weight") int weight, @RequestParam("quantity")int quantity,@RequestParam("description") String description,@RequestParam("productImage") String productImage)
 	{
 
@@ -261,7 +262,7 @@ public class AdminController {
 		return "updateProfile";
 	}
 
-	@RequestMapping(value = "updateuser",method=RequestMethod.POST)
+	@PostMapping(value = "updateuser")
 	public String updateUserProfile(@RequestParam("userid") int userid,@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("address") String address)
 
 	{
